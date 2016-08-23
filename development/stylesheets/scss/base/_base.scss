@@ -1,0 +1,38 @@
+
+::selection {
+    background  : $color-highlight;
+    color       : $color-body;
+    text-shadow : none;
+}
+
+::-moz-selection {
+    background  : $color-highlight;
+    color       : $color-body;
+    text-shadow : none;
+}
+
+body {
+    color       : $color-body;
+    font-family : $font-family-body;
+    font-size   : $font-size-body;
+    height      : 100%;
+    line-height : 1.4;
+
+    @include media( mobile-landscape ) {
+        line-height : 1.6;
+    }
+}
+
+hr {
+    display     : block;
+    height      : 1px;
+    border      : 0;
+    border-top  : 1px solid lighten( $color-body, 65 );
+    margin      : 15px 0;
+    padding     : 0;
+}
+
+html {
+    height      : 100%;
+    overflow    : hidden;
+}

@@ -1,0 +1,10 @@
+
+{{#each routes}}
+	{{#if navigation.primary}}
+		<li class="navigation-primary__item">
+			<a href="{{url}}" class="{{../selectors.router.navigate}} navigation-primary__link">
+				{{title}}
+			</a>
+		</li>
+	{{/if}}
+{{/each}}

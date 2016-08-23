@@ -1,0 +1,49 @@
+
+
+blockquote,
+cite,
+q {
+    font-family : $font-family-quote;
+    font-style  : italic;
+}
+
+blockquote {
+    background      : lighten( $color-body, 75 );
+    border-bottom   : 1px solid lighten( $color-body, 65 );
+    border-left     : 3px solid lighten( $color-body, 65 );
+    border-right    : 1px solid lighten( $color-body, 65 );
+    border-top      : 1px solid lighten( $color-body, 65 );
+    border-radius   : 3px;
+    box-shadow      : 0 0 3px lighten( $color-body, 65 ) inset;
+    color           : lighten( $color-body, 15 );
+    margin          : 0 20px 15px;
+    padding         : 20px 20px 15px;
+    quotes          : none;
+
+    &:after,
+    &:before {
+        content: '';
+        content: none;
+    }
+
+    p {
+        margin  : 0 0 5px;
+    }
+
+    cite {
+        font-size : 12px;
+        font-style: normal;
+    }
+}
+
+q {
+    quotes: '\201C''\201D''\2018''\2019';
+
+    &:before {
+        content: open-quote;
+    }
+
+    &:after {
+        content: close-quote;
+    }
+}

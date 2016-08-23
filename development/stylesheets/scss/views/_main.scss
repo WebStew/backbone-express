@@ -1,0 +1,14 @@
+
+.main {
+	bottom 		: 42px;
+	overflow-y 	:scroll;
+	position 	: fixed;
+	top 		: 65px;
+	width 		: 100%;
+	z-index 	: 1;
+}
+
+.main__body {
+	padding: 20px 22px;
+}
+

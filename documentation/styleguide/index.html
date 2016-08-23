@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="HTML5 Styleguide Wiley UI Library">
+    <title>HTML5 - Styleguide - Wiley UI Library</title>
+    <link href="/components/styleguides/HTML5/stylesheets/css/HTML5.css" rel="stylesheet">
+    <script src="/node_modules/grunt-modernizr/lib/build-files/modernizr-latest.js"></script>
+</head>
+<body>
+    <header id="demonstration-header" role="banner">
+        <nav role="navigation">
+            <ol>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#wysiwyg">WYSIWYG</a></li>
+                <li><a href="#quotations">Quotations</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#state">State</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#embedded">Embedded Content</a></li>
+                <li><a class="is__accessible link--skip" href="#">Example hidden skip link</a></li>
+            </ol>
+        </nav>
+        <h1>Style Guide <small>HTML5</small></h1>
+        <p>This module provides common HTML5 elements with default style in <a href="http://sass-lang.com/" target="_blank">SASS</a> the <a href="/">Wiley UI Library</a>. This module should be used as a styleguide for default styling within projects.</p>
+    </header>
+    <main role="main">
+        <article id="demonstration-body">
+            <section id="headings">
+                <h2>Headings</h2>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="links">
+                <p><a href="#">This is a text link</a>. <br>
+                    This is a link to a document in another language <a href="#" hreflang="fr">tranlate to french</a>. <br>
+                    This is a link in another language <a href="#" lang="de">das goed</a>. <br>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+                </p>
+            </section>
+            <section id="wysiwyg">
+                <h2><abbr title="What You See Is What You Get">WYSIWYG</abbr></h2>
+                <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
+                <p>
+                    <strong>Strong is used to indicate strong importance</strong>. <br>
+                    <em>This text has added emphasis</em>. <br>
+                    The <b>b element</b> is stylistically different text from normal text, without any special importance.<br>
+                    The <i>i element</i> is text that is offset from the normal text. <br>
+                    The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation. <br>
+                    <del>This text is deleted</del> and <ins>This text is inserted</ins>. <br>
+                    <s>This text has a strikethrough</s>. <br>
+                    Superscript<sup>Note 1</sup>. <br>
+                    Subscript for things like H<sub>2</sub>O. <br>
+                    <small>This small text is small for for fine print, etc.</small> <br>
+                    Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>. <br>
+                    The <dfn title="Definition goes here">dfn element</dfn> indicates a definition. <br>
+                    The <mark>mark element</mark> indicates a highlight. <br>
+                    The time element: <time datetime="1905-11-13">13 November 1905</time>.
+                </p>
+                <hr>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="quotations">
+                <h2>Quotations</h2>
+                <p>Example of the <a href="http://thenewcode.com/4/In-Other-Words-Using-the-blockquote-cite-and-q-elements">correct usuage of quotations</a>.</p>
+                <h3>Blockquotes</h3>
+                <p>A blockquote contains an extended quotation as a block element.</p>
+                <blockquote cite="{{http://www.cited-by.com}}">
+                    <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
+                    <p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
+                    <cite><a href="{{http://www.cited-by.com}}">{{Cited By}}</a></cite>
+                </blockquote>
+                <h3>Quotes</h3>
+                <p>Intended for a short, inline quotation that does not require a line break. <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation. <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">With a nested quote within</q></q></p>
+                <h3>Cite</h3>
+                <p>Cite always contains the name of a work like <cite>CSS for Dummies</cite>.</p>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="lists">
+                <h2>Lists</h2>
+                <h3>Definition list</h3>
+                <dl>
+                    <dt>Definition list title 1</dt>
+                    <dd>This is a definition list division.</dd>
+                    <dt>Definition list title 2</dt>
+                    <dd>This is a definition list division.</dd>
+                </dl>
+                <h3>Ordered list</h3>
+                <ol>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                </ol>
+                <h3>Unordered list</h3>
+                <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                </ul>
+                <h3>Navigation</h3>
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="#">Navigation 1</a></li>
+                        <li><a href="#">Navigation 2</a></li>
+                        <li><a href="#">Navigation 3</a></li>
+                    </ul>
+                </nav>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="tables">
+                <h2>Tabular data</h2>
+                <h3>Accessibility with scope</h3>
+                <table>
+                    <caption>Table caption</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Table Heading 1</th>
+                            <th scope="col">Table Heading 2</th>
+                            <th scope="col">Table Heading 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Table Heading Cell 1</th>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Table Heading Cell 1</th>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Table Heading Cell 1</th>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Table Heading Cell 1</th>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="col">Table Footer 1</th>
+                            <th scope="col">Table Footer 2</th>
+                            <th scope="col">Table Footer 3</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <h3>Accessibility with headers</h3>
+                <table>
+                    <caption>Table caption</caption>
+                    <thead>
+                        <tr>
+                            <th id="header-0">Table Heading 1</th>
+                            <th id="header-1">Table Heading 2</th>
+                            <th id="header-2">Table Heading 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th headers="header-0" id="header-3">Table Heading Cell 1</th>
+                            <td headers="header-1 header-3">Table Cell 2</td>
+                            <td headers="header-2 header-3">Table Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th headers="header-0" id="header-4">Table Heading Cell 1</th>
+                            <td headers="header-1 header-4">Table Cell 2</td>
+                            <td headers="header-2 header-4">Table Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th headers="header-0" id="header-5">Table Heading Cell 1</th>
+                            <td headers="header-1 header-5">Table Cell 2</td>
+                            <td headers="header-2 header-5">Table Cell 3</td>
+                        </tr>
+                        <tr>
+                            <th headers="header-0" id="header-6">Table Heading Cell 1</th>
+                            <td headers="header-1 header-6">Table Cell 2</td>
+                            <td headers="header-2 header-6">Table Cell 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="code">
+                <h2>Code</h2>
+                <p>Keyboard input: <kbd>Cmd</kbd>. Inline code: <code>&lt;div&gt;code&lt;/div&gt;</code>. Sample output: <samp>This is sample output from a computer program</samp>. <br>
+                    The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
+                    <h3>Pre-formatted text</h3>
+    <pre>! " # $ % &amp; ' ( ) * + , - . /
+    0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+    @ A B C D E F G H I J K L M N O
+    P Q R S T U V W X Y Z [ \ ] ^ _
+    ` a b c d e f g h i j k l m n o
+    p q r s t u v w x y z { | } ~ </pre>
+        <h3>Pre-formatted code</h3>
+    <pre><code>var set = function ( example ) {
+    if ( example ) {
+    ...
+    }
+    };</code></pre>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="images">
+                <h2>Images</h2>
+                <h3>No figure element</h3>
+                <h4>Static</h4>
+                <img src="http://dummyimage.com/100x100/f2f2f2/4e342e.png" alt="Image alt text" height="100" width="100" class="img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, perspiciatis sed similique odio consequuntur nemo quis corporis qui aperiam optio adipisci, velit quaerat totam, laborum repellendus fugiat veritatis libero modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus mollitia itaque amet.</p>
+                <div class="haslayout">
+                    <h4>Align left</h4>
+                    <img src="http://dummyimage.com/100x100/f2f2f2/4e342e.png" alt="Image alt text" height="100" width="100" class="img img--left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, perspiciatis sed similique odio consequuntur nemo quis corporis qui aperiam optio adipisci, velit quaerat totam, laborum repellendus fugiat veritatis libero modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus mollitia itaque amet exercitationem voluptate molestias, fuga voluptates culpa modi, blanditiis. Voluptatibus minima voluptate veniam iste beatae quisquam in nam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate magnam quo corporis fugit porro eius nam distinctio assumenda quod asperiores at ullam cum, sed id eos sequi nemo quia harum.</p>
+                </div>
+                <div class="haslayout">
+                    <h4>Align right</h4>
+                    <img src="http://dummyimage.com/100x100/f2f2f2/4e342e.png" alt="Image alt text" height="100" width="100" class="img img--right">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, perspiciatis sed similique odio consequuntur nemo quis corporis qui aperiam optio adipisci, velit quaerat totam, laborum repellendus fugiat veritatis libero modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus mollitia itaque amet exercitationem voluptate molestias, fuga voluptates culpa modi, blanditiis. Voluptatibus minima voluptate veniam iste beatae quisquam in nam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate magnam quo corporis fugit porro eius nam distinctio assumenda quod asperiores at ullam cum, sed id eos sequi nemo quia harum.</p>
+                </div>
+                <h3>Wrapped in a figure element, no figcaption</h3>
+                <figure>
+                    <img src="http://dummyimage.com/100x100/f2f2f2/4e342e.png" alt="Image alt text" height="100" width="100">
+                </figure>
+                <h3>Wrapped in a figure element, with a figcaption</h3>
+                <figure>
+                    <img src="http://dummyimage.com/200x200/f2f2f2/4e342e.png" alt="Image alt text" height="200" width="200">
+                    <figcaption>Here is a caption for this image.</figcaption>
+                </figure>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="state">
+                <h2>State</h2>
+                <h3>Loading</h3>
+                <div class="loader">
+                    <p id="loader" class="loader__signal">
+                        <span class="is__accessible">Please wait while the content loads</span>
+                    </p>
+                    <div class="loader__body loader__body--loading" aria-live="polite" aria-describedby="loader">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, perspiciatis sed similique odio consequuntur nemo quis corporis qui aperiam optio adipisci, velit quaerat totam, laborum repellendus fugiat veritatis libero modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus mollitia itaque amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, perspiciatis sed similique odio consequuntur nemo quis corporis qui aperiam optio adipisci, velit quaerat totam, laborum repellendus fugiat veritatis libero modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus mollitia itaque amet.</p>
+                    </div>
+                </div>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="forms">
+                <h2>Forms</h2>
+                <form action="#" method="get" class="form">
+                    <fieldset>
+                        <legend class="is__accessible">Input sizes</legend>
+                        <h3>Input sizes</h3>
+                        <p>Size classes are available for all form fields. Defaults to <code>width: 100%</code> with no class.</p>
+                        <div class="form__row">
+                            <label for="input__text--sml">Small input</label>
+                            <div class="form__field">
+                                <input id="input__text--sml" type="text" placeholder="Small input" class="form__input--sml">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__text--med">Medium input</label>
+                            <div class="form__field">
+                                <input id="input__text--med" type="text" placeholder="Medium input" class="form__input--med">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__text--lrg">Large input</label>
+                            <div class="form__field">
+                                <input id="input__text--lrg" type="text" placeholder="Large input" class="form__input--lrg">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Input state</legend>
+                        <h3>Input state</h3>
+                        <div class="form__row">
+                            <label for="input__text--required">
+                                <span class="form__required">*
+                                    <span class="is__accessible"> Required : </span>
+                                </span>Required input
+                            </label>
+                            <div class="form__field">
+                                <input aria-required="true" class="form__input--sml" id="input__text--required" placeholder="Required input" required="required" type="text">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__text--error">Input with additional description and error</label>
+                            <div class="form__field">
+                                <span class="form__message--error" id="form__error--0">Please ensure you enter a value for this field.</span>
+                                <input id="input__text--error" type="text" placeholder="Description and error" class="form__input--med form__input--error" aria-describedby="form__error--0 form__instructs--0">
+                                <span class="form__instruction" id="form__instructs--0">Additional instruction for this label</span>
+                            </div>
+                        </div>
+                        <div class="form__row form__row--valid">
+                            <label for="input__text-4">Valid</label>
+                            <div class="form__field">
+                                <input id="input__text-4" type="text" placeholder="Valid Input" class="form__input--valid form__input--med">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Input fields</legend>
+                        <h3>Input fields</h3>
+                        <div class="form__row form__row--disabled">
+                            <label for="input__text-disabled">Disabled text Input</label>
+                            <div class="form__field">
+                                <input id="input__text-disabled" type="text" placeholder="Text Input" disabled>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__password">Password</label>
+                            <div class="form__field">
+                                <input id="input__password" type="password" placeholder="Type your Password">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="file-input">
+                                <span class="form__required">* </span>File upload
+                            </label>
+                            <div class="form__field">
+                                <input class="validate__required" id="file-input" name="file-input" type="file">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__webaddress">Web Address</label>
+                            <div class="form__field">
+                                <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__emailaddress">Email Address</label>
+                            <div class="form__field">
+                                <input id="input__emailaddress" type="email" placeholder="name@email.com">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__phone">Phone Number</label>
+                            <div class="form__field">
+                                <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="input__search">Search</label>
+                            <div class="form__field">
+                                <input id="input__search" type="search" placeholder="Enter Search Term">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Select menus</legend>
+                        <h3>Select menus</h3>
+                        <div class="form__row">
+                            <label for="select">Select</label>
+                            <div class="form__field">
+                                <select id="select">
+                                    <optgroup label="Option Group">
+                                        <option value="">Please select an option</option>
+                                        <option value="#">Option One</option>
+                                        <option value="#">Option Two</option>
+                                        <option value="#">Option Three</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Checkboxes</legend>
+                        <h3>Checkboxes</h3>
+                        <div class="form__row form__row--options">
+                            <div class="form__field">
+                                <input id="checkbox-0" type="checkbox" name="checkbox-0">
+                                <label for="checkbox-0">Choice 1</label>
+                            </div>
+                            <div class="form__field">
+                                <input id="checkbox-1" type="checkbox" name="checkbox-1">
+                                <label for="checkbox-1">Choice 2</label>
+                            </div>
+                            <div class="form__field">
+                                <input id="checkbox-2" type="checkbox" name="checkbox-2">
+                                <label for="checkbox-2">Choice 2</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Radio buttons</legend>
+                        <h3>Radio buttons</h3>
+                        <div class="form__row form__row--options">
+                            <div class="form__field">
+                                <input id="radio-0" type="radio" name="radio">
+                                <label for="radio-0">Choice 1</label>
+                            </div>
+                            <div class="form__field">
+                                <input id="radio-1" type="radio" name="radio">
+                                <label for="radio-1">Choice 2</label>
+                            </div>
+                            <div class="form__field">
+                                <input id="radio-2" type="radio" name="radio">
+                                <label for="radio-2">Choice 2</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Textareas</legend>
+                        <h3>Textareas</h3>
+                        <div class="form__row">
+                            <label for="textarea">Textarea</label>
+                            <div class="form__field">
+                                <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">HTML5 inputs</legend>
+                        <h3>HTML5 inputs</h3>
+                        <div class="form__row">
+                            <label for="ic">Color input</label>
+                            <div class="form__field">
+                                <input type="color" id="ic" value="#03c6fe">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="in">Number input</label>
+                            <div class="form__field">
+                                <input id="in" type="number" min="0" max="10" value="5">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="ir">Range input</label>
+                            <div class="form__field">
+                                <input type="range" id="ir" value="25" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="idd">Date input</label>
+                            <div class="form__field">
+                                <input type="date" id="idd" value="1970-01-01">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="idm">Month input</label>
+                            <div class="form__field">
+                                <input type="month" id="idm" value="1970-01">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="idw">Week input</label>
+                            <div class="form__field">
+                                <input type="week" id="idw" value="1970-W01">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="idt">Datetime input</label>
+                            <div class="form__field">
+                                <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <label for="idtl">Datetime-local input</label>
+                            <div class="form__field">
+                                <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <h3>Form actions</h3>
+                    <fieldset>
+                        <legend class="is__accessible">Buttons</legend>
+                        <h4>Buttons</h4>
+                        <div class="form__submit-row">
+                            <ul>
+                                <li><button class="button" type="button">Button</button></li>
+                                <li><button class="button button--action" type="button">Action</button></li>
+                                <li><button class="button button--actioned" type="button">Actioned</button></li>
+                                <li><button class="button button--error" type="button">Error</button></li>
+                                <li><button class="button button--valid" type="button">Valid</button></li>
+                                <li><button class="button button--warning" type="button">Warning</button></li>
+                                <li><button class="button button--link" type="button">Link</button></li>
+                                <li><button class="button button--disabled" type="button" disabled>Disabled button</button></li>
+                                <li><button class="button button--action button--disabled" type="button" disabled>Disabled action</button></li>
+                                <li><button class="button button--actioned button--disabled" type="button" disabled>Disabled actioned</button></li>
+                                <li><button class="button button--error button--disabled" type="button" disabled>Disabled error</button></li>
+                                <li><button class="button button--valid button--disabled" type="button" disabled>Disabled valid</button></li>
+                                <li><button class="button button--warning button--disabled" type="button" disabled>Disabled warning</button></li>
+                                <li><button class="button button--link button--disabled" type="button" disabled>Disabled link</button></li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Inputs</legend>
+                        <h4>Inputs</h4>
+                        <div class="form__submit-row">
+                            <ul><li>
+                                <li><input class="button" type="button" value="Button"><li>
+                                <li><input class="button button--action" type="button" value="Action"></li>
+                                <li><input class="button button--actioned" type="button" value="Actioned"></li>
+                                <li><input class="button button--error" type="button" value="Error"></li>
+                                <li><input class="button button--valid" type="button" value="Valid"></li>
+                                <li><input class="button button--warning" type="button" value="Warning"></li>
+                                <li><input class="button button--link" type="button" value="Link"></li>
+                                <li><input class="button button--disabled" type="button" value="Disabled button" disabled></li>
+                                <li><input class="button button--action button--disabled" type="button" value="Disabled action" disabled></li>
+                                <li><input class="button button--actioned button--disabled" type="button" value="Disabled actioned" disabled></li>
+                                <li><input class="button button--error button--disabled" type="button" value="Disabled error" disabled></li>
+                                <li><input class="button button--valid button--disabled" type="button" value="Disabled valid" disabled></li>
+                                <li><input class="button button--warning button--disabled" type="button" value="Disabled warning" disabled></li>
+                                <li><input class="button button--link button--disabled" type="button" value="Disabled link" disabled></li>
+                            </li>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="is__accessible">Links</legend>
+                        <h4>Links</h4>
+                        <div class="form__submit-row">
+                            <ul>
+                                <li><a href="#" class="button">Button</a></li>
+                                <li><a href="#" class="button button--action">Action</a></li>
+                                <li><a href="#" class="button button--actioned">Actioned</a></li>
+                                <li><a href="#" class="button button--error">Error</a></li>
+                                <li><a href="#" class="button button--valid">Valid</a></li>
+                                <li><a href="#" class="button button--warning">Warning</a></li>
+                                <li><a href="#" class="button button--link">Link</a></li>
+                                <li><a href="#" class="button button--disabled">Disabled button</a></li>
+                                <li><a href="#" class="button button--action button--disabled">Disabled action</a></li>
+                                <li><a href="#" class="button button--actioned button--disabled">Disabled actioned</a></li>
+                                <li><a href="#" class="button button--error button--disabled">Disabled error</a></li>
+                                <li><a href="#" class="button button--valid button--disabled">Disabled valid</a></li>
+                                <li><a href="#" class="button button--warning button--disabled">Disabled warning</a></li>
+                                <li><a href="#" class="button button--link button--disabled">Disabled link</a></li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                </form>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+            <section id="embedded">
+                <h2>Embedded content</h2>
+                <h3>Audio</h3>
+                <audio controls="">audio</audio>
+                <h3>Video</h3>
+                <video controls="">video</video>
+                <h3>Canvas</h3>
+                <canvas>canvas</canvas>
+                <h3>Meter</h3>
+                <meter value="24" min="0" max="100" optimum="100" high="75" low="25">10 out of 100</meter>
+                <meter value="50" min="0" max="100" optimum="100" high="75" low="25">50 out of 100</meter>
+                <meter value="76" min="0" max="100" optimum="100" high="75" low="25">90 out of 100</meter>
+                <h3>Progress</h3>
+                <progress value="0" max="100"></progress>
+                <progress value="50" max="100"></progress>
+                <h3>Inline SVG</h3>
+                <svg height="200px" width="200px">
+                    <circle cx="100" cy="100" r="100" fill="#f2f2f2" stroke="#d9d9d9" stroke-width="1"></circle>
+                </svg>
+                <h3>Iframe</h3>
+                <iframe src="" height="300" width="300">
+                    <p>Apologies, your browser does not support iframes.</p>
+                </iframe>
+                <nav class="align--right">
+                    <a href="#demonstration-header">Back to top</a>
+                </nav>
+            </section>
+        </article>
+        <aside role="complementary">
+            <p>Secondary content within <code>&lt;div&gt;aside&lt;/div&gt;</code>.</p>
+        </aside>
+    </main>
+    <footer role="contentinfo">
+        <p><small>Footer content within <code>&lt;div&gt;footer&lt;/div&gt;</code>.</small></p>
+    </footer>
+    <script
+        src="/components/styleguides/HTML5/node_modules/requirejs/require.js"
+        data-main="/components/styleguides/HTML5/javascripts/wiley-application">
+    </script>
+</body>
+</html>

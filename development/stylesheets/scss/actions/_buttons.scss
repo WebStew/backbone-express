@@ -1,0 +1,156 @@
+
+.button {
+    border          : 1px solid lighten( $color-body, 45 );
+    border-radius   : 3px;
+    box-shadow      : 0 0 3px lighten( $color-body, 50 );
+    color           : $color-body;
+    cursor          : pointer;
+    display         : inline-block;
+    font-family     : $font-family-body;
+    font-size       : $font-size-body;
+    @include        gradient-vertical( lighten( $color-body, 75 ), lighten( $color-body, 55 ));
+    line-height     : 1;
+    margin          : 0 0 10px;
+    padding         : 7px 15px;
+    text-align      : center;
+    text-decoration : none;
+    white-space     : nowrap;
+    width           : 100%;
+    vertical-align  : middle;
+
+    @include media( mobile-landscape ) {
+        margin      : 0 5px 10px 0;
+        width       : auto;
+    }
+
+    .csstransitions & {
+        @include    transition-duration( 0.25s );
+        @include    transition-property( border, box-shadow, color, width );
+        @include    transition-timing( $transition-function );
+    }
+
+    &::-moz-focus-inner {
+        border      : 0;
+        padding     : 0 0 2px;
+    }
+
+    &:visited {
+        color       : $color-body;
+    }
+
+    &:hover,
+    &:focus {
+        @include    gradient-vertical( lighten( $color-body, 50 ), lighten( $color-body, 50 ));
+        border      : 1px solid lighten( $color-body, 30 );
+        box-shadow  : 0 0 3px lighten( $color-body, 30 ) inset;
+        color       : $color-body;
+    }
+}
+
+.button--action,
+.button--actioned,
+.button--error,
+.button--valid,
+.button--warning {
+    color: #fff;
+
+    &:visited,
+    &:hover,
+    &:focus {
+        color: #fff;
+    }
+}
+
+.button--action {
+    border          : 1px solid darken( $color-action, 25 );
+    box-shadow      : 0 0 3px darken( $color-action, 25 );
+    @include        gradient-vertical( $color-action, darken( $color-action, 20 ));
+
+    &:hover,
+    &:focus {
+        @include    gradient-vertical( darken( $color-action, 25 ), darken( $color-action, 25 ));
+        border      : 1px solid darken( $color-action, 30 );
+        box-shadow  : 0 0 3px darken( $color-action, 30 ) inset;
+    }
+}
+
+.button--actioned {
+    border          : 1px solid darken( $color-actioned, 25 );
+    box-shadow      : 0 0 3px darken( $color-actioned, 25 );
+    @include        gradient-vertical( $color-actioned, darken( $color-actioned, 20 ));
+
+    &:hover,
+    &:focus {
+        @include    gradient-vertical( darken( $color-actioned, 25 ), darken( $color-actioned, 25 ));
+        border      : 1px solid darken( $color-actioned, 30 );
+        box-shadow  : 0 0 3px darken( $color-actioned, 30 ) inset;
+    }
+}
+
+.button--error {
+    border          : 1px solid darken( $color-error, 20 );
+    box-shadow      : 0 0 3px darken( $color-error, 20 );
+    @include        gradient-vertical( $color-error, darken( $color-error, 20 ));
+
+    &:hover,
+    &:focus {
+        @include    gradient-vertical( darken( $color-error, 20 ), darken( $color-error, 20 ));
+        border      : 1px solid darken( $color-error, 30 );
+        box-shadow  : 0 0 3px darken( $color-error, 30 ) inset;
+    }
+}
+
+.button--valid {
+    border          : 1px solid darken( $color-valid, 20 );
+    box-shadow      : 0 0 3px darken( $color-valid, 20 );
+    @include        gradient-vertical( $color-valid, darken( $color-valid, 20 ));
+
+    &:hover,
+    &:focus {
+        @include    gradient-vertical( darken( $color-valid, 20 ), darken( $color-valid, 20 ));
+        border      : 1px solid darken( $color-valid, 30 );
+        box-shadow  : 0 0 3px darken( $color-valid, 30 ) inset;
+    }
+}
+
+.button--warning {
+    border          : 1px solid darken( $color-warning, 20 );
+    box-shadow      : 0 0 3px darken( $color-warning, 20 );
+    @include        gradient-vertical( $color-warning, darken( $color-warning, 20 ));
+
+    &:hover,
+    &:focus {
+        @include    gradient-vertical( darken( $color-warning, 20 ), darken( $color-warning, 20 ));
+        border      : 1px solid darken( $color-warning, 30 );
+        box-shadow  : 0 0 3px darken( $color-warning, 30 ) inset;
+    }
+}
+
+.button--link,
+.button--link:hover,
+.button--link:focus {
+    background      : none;
+    border-color    : transparent;
+    box-shadow      : none;
+}
+
+.button--link {
+    color           : $color-action;
+    text-decoration : underline;
+
+    &:visited {
+        color       : darken( $color-actioned, 25 );
+    }
+
+    &:hover,
+    &:focus {
+        color           : darken( $color-action, 25 );
+        text-decoration : none;
+    }
+}
+
+.button--disabled {
+    cursor          : text;
+    @include        opacity( 0.4 );
+    pointer-events  : none;
+}

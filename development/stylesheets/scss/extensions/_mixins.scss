@@ -1,0 +1,195 @@
+
+// Ensure this a transition is always hardware accelerated when required
+@mixin accelerate( $tx: 0, $ty: 0, $tz: 0 ) {
+    -webkit-transform   : translate3d( $tx, $ty, $tz );
+    -moz-transform      : translate3d( $tx, $ty, $tz );
+    -ms-transform       : translate3d( $tx, $ty, $tz );
+    -o-transform        : translate3d( $tx, $ty, $tz );
+    transform           : translate3d( $tx, $ty, $tz );
+}
+
+// Cross browser box-sizing
+@mixin box-sizing( $value ) {
+    -webkit-box-sizing  : $value;
+    -moz-box-sizing     : $value;
+    box-sizing          : $value;
+}
+
+// Cross browser background grandients
+@mixin gradient-vertical( $start-color: lighten( $color-body, 75 ), $end-color: lighten( $color-body, 65 ), $start-percent: 0%, $end-percent: 100% ) {
+
+    background : $start-color;
+
+	// Safari 5.1-6, Chrome 10+
+	background-image : -webkit-linear-gradient( top, $start-color $start-percent, $end-color $end-percent );
+
+	// Opera 12
+	background-image  : -o-linear-gradient( top, $start-color $start-percent, $end-color $end-percent );
+
+	// Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+	background-image  : linear-gradient( to bottom, $start-color $start-percent, $end-color $end-percent );
+	background-repeat : repeat-x;
+
+	// IE9 and down
+	filter            : progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0);
+}
+
+// Wraps the contained SCSS in a media query
+@mixin media( $media ) {
+
+    @if $media == mobile-portrait {
+        @media only screen and ( min-width: $mobile-portrait ) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-landscape {
+        @media only screen and ( min-width: $mobile-landscape ) {
+            @content;
+        }
+    }
+
+    @else if $media == phablet {
+        @media only screen and ( min-width: $phablet ) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-small {
+        @media only screen and ( min-width: $desktop-small ) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-medium {
+        @media only screen and ( min-width: $desktop-medium ) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-large {
+        @media only screen and ( min-width: $desktop-large ) {
+            @content;
+        }
+    }
+
+    @else if $media == print {
+        @media print {
+            @content;
+        }
+    }
+}
+
+// Cross browser opacity
+@mixin opacity( $value ) {
+    filter          : alpha(opacity=($value * 100));
+    -ms-filter      : "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
+    -moz-opacity    : $value;
+    -khtml-opacity  : $value;
+    opacity         : $value;
+}
+
+// Cross browser single transition
+@mixin transition( $property, $duration, $effect, $delay: false ) {
+
+    $value: $property $duration $effect;
+
+    @if $delay {
+        $value: $value + ' ' + $delay;
+    }
+
+    -webkit-transition  : $value;
+    -moz-transition     : $value;
+    -o-transition       : $value;
+    transition          : $value;
+}
+
+// Cross browser transform
+@mixin transform( $value: none ) {
+    -webkit-transform   : $value;
+    -moz-transform      : $value;
+    -ms-transform       : $value;
+    -o-transform        : $value;
+    transform           : $value;
+}
+
+// Cross browser multiple transitions properties
+@mixin transition-property( $property-1, $property-2: false, $property-3: false, $property-4: false ) {
+
+    $value: $property-1;
+
+    @if $property-2 {
+        $value: $value + ', ' + $property-2;
+    }
+
+    @if $property-3 {
+        $value: $value + ', ' + $property-3;
+    }
+
+    @if $property-4 {
+        $value: $value + ', ' + $property-4;
+    }
+
+    -webkit-transition-property : $value;
+    -moz-transition-property    : $value;
+    -o-transition-property      : $value;
+    transition-property         : $value;
+}
+
+// Cross browser multiple transitions durations
+@mixin transition-duration( $duration-1, $duration-2: false, $duration-3: false ) {
+
+    $value: $duration-1;
+
+    @if $duration-2 {
+        $value: $value + ', ' + $duration-2;
+    }
+
+    @if $duration-3 {
+        $value: $value + ', ' + $duration-3;
+    }
+
+    -webkit-transition-duration : $value;
+    -moz-transition-duration    : $value;
+    -o-transition-duration      : $value;
+    transition-duration         : $value;
+}
+
+// Cross browser multiple transitions timings
+@mixin transition-timing( $timing-function-1, $timing-function-2: false, $timing-function-3: false ) {
+
+    $value: $timing-function-1;
+
+    @if $timing-function-2 {
+        $value: $value + ', ' + $timing-function-2;
+    }
+
+    @if $timing-function-3 {
+        $value: $value + ', ' + $timing-function-3;
+    }
+
+    -webkit-transition-timing-function  : $value;
+    -moz-transition-timing-function     : $value;
+    -o-transition-timing-function       : $value;
+    transition-timing-function          : $value;
+}
+
+// Word break
+@mixin word-break( $boolean ) {
+
+    $value: normal;
+
+    @if $boolean {
+        $value: break-word;
+    }
+
+    word-wrap: $value;
+}
+
+// Appearance
+@mixin appearance( $value ) {
+
+    -webkit-appearance  : $value;
+    -moz-appearance     : $value;
+    appearance          : $value;
+}

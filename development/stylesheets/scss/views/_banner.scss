@@ -1,0 +1,19 @@
+
+.banner {
+	@include 	gradient-vertical();
+	@include 	box-sizing( border-box );
+	border 		: 1px solid lighten( $color-body , 40 );
+	box-shadow 	: 0 0 3px #000;
+	height 		: 65px;
+	left 		: 0;
+	max-height 	: 65px;
+	position 	: fixed;
+	top 		: 0;
+	width 		: 100%;
+	z-index 	: 2;
+}
+
+.banner__logo {
+	margin : 0;
+	border : none;
+}

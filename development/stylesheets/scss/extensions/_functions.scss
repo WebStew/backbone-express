@@ -1,0 +1,30 @@
+
+// Converts the pixel unit into a relative unit based on passed argument or base font size
+// Limited to 3 decimals
+@function px2em( $pixels, $base : $font-size-body, $unit : $relative ) {
+
+    @if ( type_of( $pixels ) != 'number' ) {
+        @return $pixels;
+    }
+
+    @return if( $pixels == 0, 0, round(( $pixels / $base ) * $unit * 1000 ) / 1000 );
+}
+
+// Wrapper for the size function
+@function size( $pixels, $base : $font-size-body, $unit : $relative ) {
+
+    $new: ();
+
+    @each $pixel in $pixels {
+        $new: append( $new, px2em( $pixel, $base, $unit ));
+    }
+
+    @return if( length( $new ) == 1, nth( $new, 1 ), $new );
+
+}
+
+// Returns an integer fraction based on passed argument or base font size. Useful for line heights.
+@function fraction( $pixels, $base : $font-size-body ) {
+
+    @return $pixels / $base;
+}

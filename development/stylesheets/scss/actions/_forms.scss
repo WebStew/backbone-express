@@ -1,0 +1,350 @@
+
+fieldset {
+    border-bottom   : 1px dotted lighten( $color-body, 65 );
+    margin          : 0 0 15px;
+    padding         : 0 0 15px;
+}
+
+form {
+    margin  : 0 0 5px;
+}
+
+input,
+textarea,
+select {
+    background      : lighten( $color-body, 75 );
+    border          : 1px solid lighten( $color-body, 65 );
+    border-radius   : 3px;
+    box-shadow      : 0 0 3px lighten( $color-body, 65 ) inset;
+    box-sizing      : border-box;
+    color           : $color-body;
+    padding         : 5px 10px 6px;
+    vertical-align  : middle;
+    width           : 100%;
+
+    .form__row--disabled & {
+        cursor      : default;
+    }
+
+    .csstransitions & {
+        @include    transition-duration( 0.25s );
+        @include    transition-property( background, border, box-shadow, width );
+        @include    transition-timing( $transition-function );
+    }
+
+    &:focus {
+        background  : #fff;
+        border      : 1px solid $color-action;
+        box-shadow  : 0 0 3px $color-action;
+    }
+}
+
+input,
+textarea {
+
+    &::-webkit-input-placeholder {
+       color : lighten( $color-body, 33 );
+    }
+
+    /* Firefox 18- */
+    &:-moz-placeholder {
+       color : lighten( $color-body, 33 );
+    }
+
+    /* Firefox 19+ */
+    &::-moz-placeholder {
+       color : lighten( $color-body, 33 );
+    }
+
+    &:-ms-input-placeholder {
+       color : lighten( $color-body, 33 );
+    }
+}
+
+// Not currently supported in Firefox and IE
+input {
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button,
+    &::-webkit-clear-button,
+    &::-webkit-calendar-picker-indicator {
+        display : none;
+    }
+
+    &::-ms-clear {
+        display : none;
+    }
+}
+
+input[ type="checkbox" ],
+input[ type="radio" ] {
+    background  : #fff;
+    border      : none;
+    box-shadow  : none;
+    cursor      : pointer;
+    margin      : 0 5px 0 0;
+    padding     : 0;
+    position    : relative;
+    top         : -2px;
+    width       : auto;
+
+    &:focus {
+        outline : none;
+
+        + label {
+            color : $color-action;
+        }
+    }
+
+    .form__row--disabled & {
+        cursor  : default;
+    }
+}
+
+input[ type="file" ] {
+    padding : 3px;
+}
+
+input[ type="color" ] {
+    cursor  : pointer;
+    padding : 2px 0;
+    width   : 25px;
+
+    &::-webkit-color-swatch-wrapper {
+        padding : 1px 3px;
+    }
+
+    &::-moz-color-swatch {
+        border          : 1px solid darken( $color-action, 15 );
+        border-radius   : 3px;
+        box-shadow      : 0 0 3px darken( $color-action, 10 ) inset;
+    }
+
+    &::-webkit-color-swatch {
+        border          : 1px solid darken( $color-action, 15 );
+        border-radius   : 3px;
+        box-shadow      : 0 0 3px darken( $color-action, 10 ) inset;
+    }
+}
+
+input[ type="number" ] {
+    -moz-appearance : textfield;
+}
+
+input[ type="range" ] {
+    @include            appearance( none );
+    background          : none;
+    border              : none;
+    box-shadow          : none;
+    margin              : 10px 0;
+    padding             : 0;
+    width               : 100%;
+
+    &:focus {
+        outline : none;
+    }
+
+    &::-webkit-slider-runnable-track {
+        background      : lighten( $color-body, 75 );
+        border          : 1px solid lighten( $color-body, 65 );
+        border-radius   : 3px;
+        box-shadow      : 0 0 3px lighten( $color-body, 65 ) inset;
+        cursor          : pointer;
+        height          : 15px;
+        animate         : 0.2s;
+        width           : 100%;
+    }
+
+    &::-webkit-slider-thumb {
+        background          : lighten( $color-body, 65 );
+        box-shadow          : 0 0 3px lighten( $color-body, 65 );
+        border              : 1px solid lighten( $color-body, 50 );
+        border-radius       : 3px;
+        cursor              : pointer;
+        height              : 40px;
+        margin-top          : -14px;
+        width               : 15px;
+        -webkit-appearance  : none;
+    }
+
+    &::-moz-focus-outer {
+        border : none;
+    }
+
+    &::-moz-range-track {
+        background      : lighten( $color-body, 75 );
+        border          : 1px solid lighten( $color-body, 65 );
+        border-radius   : 3px;
+        box-shadow      : 0 0 3px lighten( $color-body, 65 ) inset;
+        cursor          : pointer;
+        height          : 15px;
+        animate         : 0.2s;
+        width           : 100%;
+    }
+
+    &::-moz-range-thumb {
+        background          : lighten( $color-body, 65 );
+        box-shadow          : 0 0 3px lighten( $color-body, 65 );
+        border              : 1px solid lighten( $color-body, 50 );
+        border-radius       : 3px;
+        cursor              : pointer;
+        height              : 40px;
+        width               : 15px;
+    }
+
+    &::-ms-track {
+        background      : none;
+        border          : none;
+        color           : transparent;
+        cursor          : pointer;
+        height          : 45px;
+        animate         : 0.2s;
+        width           : 100%;
+    }
+
+    &::-ms-thumb {
+        background          : lighten( $color-body, 65 );
+        box-shadow          : 0 0 3px lighten( $color-body, 65 );
+        border              : 1px solid lighten( $color-body, 50 );
+        border-radius       : 3px;
+        cursor              : pointer;
+        height              : 40px;
+        width               : 15px;
+    }
+
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+        background          : lighten( $color-body, 75 );
+        box-shadow          : 0 0 3px lighten( $color-body, 65 ) inset;
+        border              : 1px solid lighten( $color-body, 65 );
+        border-radius       : 3px;
+        height              : 15px;
+    }
+}
+
+label {
+    color       : $color-body;
+    display     : inline-block;
+    font-size   : 700;
+    cursor      : pointer;
+
+    .form__row--disabled & {
+        cursor  : text;
+    }
+
+    .csstransitions & {
+        @include transition( color, 0.25s, $transition-function );
+    }
+}
+
+legend {
+    color       : darken( $color-body, 10 );
+    display     : block;
+    font-size   : 21px;
+    padding     : 0 0 15px;
+}
+
+select {
+    cursor      : pointer;
+}
+
+textarea {
+    font-family : $font-family-body;
+    font-size   : $font-size-body;
+    overflow    : auto;
+}
+
+// Form structure
+.form__row,
+.form__submit-row {
+    margin      : 0 0 10px;
+}
+
+.form__submit-row {
+
+    ul {
+        list-style  : none;
+        margin      : 0;
+    }
+
+    li {
+        margin      : 0;
+
+        @include media( mobile-landscape ) {
+            display : inline;
+        }
+    }
+}
+
+.form__row--disabled {
+    @include opacity( 0.4 );
+}
+
+.form__required {
+    color       : $color-error;
+    font-size   : 12px;
+    font-weight : 700;
+
+    legend & {
+        position: relative;
+        top     : -5px;
+    }
+}
+
+.form__message--error {
+    color   : $color-error;
+    display : block;
+    margin  : 0 0 5px;
+}
+
+.form__field {
+    padding : 5px 0 0;
+}
+
+.form__instruction {
+    cursor      : help;
+    display     : block;
+    font-size   : 12px;
+    padding-top : 5px;
+
+    @include media( mobile-landscape ) {
+        display     : inline;
+        margin-left : 2px;
+        padding     : 0;
+        position    : relative;
+        top         : 1px;
+    }
+}
+
+.form__input--error {
+    border-color    : $color-error;
+    box-shadow      : 0 0 3px $color-error inset;
+}
+
+.form__input--valid {
+    border-color    : $color-valid;
+    box-shadow      : 0 0 3px $color-valid inset;
+}
+
+// Form control sizes
+.form__input--sml {
+
+    @include media( mobile-landscape ) {
+        width : 25%;
+    }
+}
+
+.form__input--med {
+
+    @include media( mobile-landscape ) {
+        width : 50%;
+    }
+}
+
+.form__input--lrg {
+
+    @include media( mobile-landscape ) {
+        width : 75%;
+    }
+}
+

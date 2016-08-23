@@ -1,0 +1,45 @@
+
+.navigation-primary {
+	margin : 0;
+}
+
+.navigation-primary__item {
+	float 	: right;
+	margin 	: 0;
+
+	&:first-child {
+		float : left;
+	}
+}
+
+.navigation-primary__link {
+	border-left 	: 1px solid lighten( $color-body , 40 );
+	display 		: block;
+	padding 		: 21px 25px 20PX;
+
+	&:hover ,
+	&:focus {
+		background 		: lighten( $color-body , 55 );
+	}
+
+	.csstransitions & {
+        @include    transition-duration( 0.25s );
+        @include    transition-property( background );
+        @include    transition-timing( $transition-function );
+    }
+}
+
+.navigation-primary__link--index {
+	display : block;
+
+	&:hover ,
+	&:focus {
+		@include opacity( 0.4 );
+	}
+
+	.csstransitions & {
+        @include    transition-duration( 0.25s );
+        @include    transition-property( opacity );
+        @include    transition-timing( $transition-function );
+    }
+}

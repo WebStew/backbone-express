@@ -1,0 +1,118 @@
+
+audio,
+canvas,
+iframe,
+meter,
+progress,
+video {
+    margin: 0 0 15px;
+    width : 100%;
+}
+
+canvas,
+iframe,
+meter,
+progress {
+    background      : lighten( $color-body, 75 );
+    border-radius   : 3px;
+    box-shadow      : 0 0 3px lighten( $color-body, 65 ) inset;
+}
+
+canvas,
+iframe {
+    border: 1px solid lighten( $color-body, 65 );
+}
+
+iframe {
+    overflow: hidden;
+}
+
+meter,
+progress {
+    @include    appearance( none );
+    border      : none;
+    display     : block;
+    font-size   : 10px;
+    height      : 17px;
+    text-align  : center;
+}
+
+meter {
+
+    &::-webkit-meter-bar {
+        background      : lighten( $color-body, 75 );
+        border          : 1px solid lighten( $color-body, 65 );
+        border-radius   : 3px;
+        box-shadow      : 0 0 2px lighten( $color-body, 65 ) inset;
+    }
+
+    &::-webkit-meter-optimum-value,
+    &::-webkit-meter-suboptimum-value,
+    &::-webkit-meter-even-less-good-value {
+        border-radius: 3px;
+    }
+
+    &::-webkit-meter-optimum-value {
+        @include gradient-vertical( $color-valid, darken( $color-valid, 20 ));
+    }
+
+    &::-webkit-meter-suboptimum-value {
+        @include gradient-vertical( $color-warning, darken( $color-warning, 20 ));
+    }
+
+    &::-webkit-meter-even-less-good-value  {
+        @include gradient-vertical( $color-error, darken( $color-error, 20 ));
+    }
+
+    &::-moz-meter-bar {
+        border-radius: 3px;
+    }
+
+    &:-moz-meter-optimum::-moz-meter-bar {
+        @include gradient-vertical( $color-valid, darken( $color-valid, 20 ));
+    }
+
+    &:-moz-meter-sub-optimum::-moz-meter-bar {
+        @include gradient-vertical( $color-warning, darken( $color-warning, 20 ));
+    }
+
+    &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+        @include gradient-vertical( $color-error, darken( $color-error, 20 ));
+    }
+}
+
+progress{
+
+    &::-webkit-progress-bar {
+        background      : lighten( $color-body, 75 );
+        border          : 1px solid lighten( $color-body, 65 );
+        border-radius   : 3px;
+        box-shadow      : 0 0 2px lighten( $color-body, 65 ) inset;
+    }
+
+    &::-webkit-progress-value {
+        border-radius   : 3px;
+        @include        gradient-vertical( $color-action, darken( $color-action, 20 ));
+    }
+
+    &::-moz-progress-bar {
+        border-radius   : 3px;
+        @include        gradient-vertical( $color-action, darken( $color-action, 20 ));
+    }
+}
+
+svg {
+    margin: 0 0 15px;
+}
+
+video {
+    background: lighten( $color-body, 65 );
+
+    &:hover {
+        background: lighten( $color-body, 50 );
+    }
+
+    .csstransitions & {
+        @include transition( background, 0.25s, $transition-function );
+    }
+}
